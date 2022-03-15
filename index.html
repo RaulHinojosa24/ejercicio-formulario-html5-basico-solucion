@@ -11,12 +11,39 @@
 </head>
 
 <body class="container">
-    <form method="post" action="">
+    <form method="post" action="https://singulars2022.free.beeceptor.com">
 
         <fieldset>
-
             <label for="nombre">Nombre: </label>
-            <input type="text" required maxlength="50" placeholder="Óscar" name="nombre" id="nombre" required>
+            <input type="text" maxlength="50" placeholder="Nombre" name="nombre" id="nombre" required>
+
+            <label for="edad">Edad: </label>
+            <input type="number" min="18" max="99" placeholder="Edad" name="edad" id="edad" required>
+
+            <label for="dni">DNI:</label>
+            <input type="text" pattern="[0-9]{8}[A-Za-z]{1}" placeholder="00000000A" name="dni" id="dni" required>
+
+            <label for="ciudad">Ciudad de origen:</label>
+            <input type="text" maxlength="100" placeholder="Ciudad de origen" name="ciudad" id="ciudad" required>
+
+            <label for="transporte">¿Cómo vienes a estudiar?</label>
+            <select id="transporte" name="transporte" required>
+                <option value="A pie" selected>A pie</option>
+                <option value="Transporte público">Transporte público</option>
+                <option value="Transporte privado">Transporte privado</option>
+            </select>
+
+            <label for="objetivos">Objetivos del curso:</label>
+            <textarea name="objetivos" id="objetivos" cols="30" rows="10" maxlength="1024"></textarea>
+
+            <label for="sobre-ti-verdad1">Sobre ti (primera verdad):</label>
+            <input type="text" placeholder="Verdad 1" name="sobre-ti-verdad1" id="sobre-ti-verdad1" required>
+
+            <label for="sobre-ti-verdad2">Sobre ti (segunda verdad):</label>
+            <input type="text" placeholder="Verdad 2" name="sobre-ti-verdad2" id="sobre-ti-verdad2" required>
+
+            <label for="sobre-ti-mentira">Sobre ti (mentira):</label>
+            <input type="text" placeholder="Mentira" name="sobre-ti-mentira" id="sobre-ti-mentira" required>
         </fieldset>
 
         <input type="submit" class="submit" id="submit" value="Enviar" />
